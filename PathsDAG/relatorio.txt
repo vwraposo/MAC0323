@@ -1,0 +1,19 @@
+/*/////////////////////////////////////////////////////////////////////////////////
+    Nome: Victor Wichmann Raposo
+    Numero USP: 9298020
+    Data: 14/05/2016
+                    Exercise 4.2.33 Number of paths in a DAG
+///////////////////////////////////////////////////////////////////////////////*/
+
+    Relatório sobre o caso bonus:
+
+    No exemplo bonus há uma grande quantidade de caminhos de "zzz" para "a".
+Dessa forma, a maneira que eu havia feito a dfs que calcula o número de caminhos 
+ia demorar muito tempo para encontrar a resposta. Então, conforme fazia a dfs, 
+memorizava em um vetor "memo" a quantidade de caminhos até "a" (memo[u] é a 
+quantidade de camninhos entre o vértice u até o vértice destino, no caso "a"). 
+Assim, economizo tempo, já que nao terei que percorrer um caminho já percorrido.
+    Usando essa técnica consegui fazer com que meu algoritmo resolvesse em pouco
+tempo, no entanto o resultado é um número maior do que cabe em uma variável do 
+tipo int, portanto tive que usar a clase BigInteger, que permite números tão 
+grandes quanto o da resposta.

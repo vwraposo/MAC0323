@@ -1,0 +1,129 @@
+Relatorio:
+    Para analisar de desempenho das diferentes estrutura fiz uma série de testes e usei a ferramenta "time" do terminal 
+para calcular o tempo de execução. Todos os testes, os resultados e o tempo de execução estão anexados abaixo.
+    A partir dessa análise conclui que as estruturas com os menores tempos foram a TST e a Tabela de Hash. Enquanto a 
+ARNE e a 10-way Trie tiveram desempenhos piores. Além disso, em um caso teste a 10-way Trie usou muita memória, a ponto 
+de eu ter que acrescentar memória com o comando -Xmx.
+    Sobre o estudo do número pi, o processamento do arquivo com 10 milhões de digitos, foi bem mais devagar, 18s,  enquanto
+ o de 1 milhão 1s. Para o arquivo menor o valor máximo de L foi 4, enquanto para o outro foi 5.
+
+
+Tempos para cada estrutura:
+    TST:
+        - L > 0:
+
+                time java UniqueL 1 < pi-1million.txt 
+                                10
+                                real    0m0.391s        
+                time java UniqueL 10 < pi-1million.txt 
+                                999945
+                                real    0m2.171s
+                time java UniqueL 60 < pi-1million.txt 
+                                999941
+                                real    0m19.433s
+
+
+        - L == 0 e sem outro parametro (Estudo do Pi):
+               time java UniqueL 0 < pi-1million.txt 
+                                4
+                                real    0m1.618s
+                time java UniqueL 0 < pi-10million.txt 
+                                5
+                                real    0m18.831s
+
+ 
+        - L == 0 com outro parametro:
+                time java UniqueL 0 10000
+                                3
+                                real    0m0.294s
+                time java UniqueL 0 100000
+                                3
+                                real    0m5.593s
+                time java UniqueL 0 200000
+                                4
+                                real    0m20.767s
+    RedBlackBST:
+        - L > 0:
+                time java UniqueL 1 < pi-1million.txt 
+                                10
+                                real    0m0.416s
+                time java UniqueL 10 < pi-1million.txt 
+                                999945
+                                real    0m2.289s
+                time java UniqueL 60 < pi-1million.txt 
+                                999941
+                                real    0m19.341s
+        - L == 0 e sem outro parametro (Estudo do Pi):
+                time java UniqueL 0 < pi-1million.txt
+                                4
+                                real    0m1.759s
+                time java UniqueL 0 < pi-10million.txt
+                                5       
+                                real    0m20.500s
+        - L == 0 com outro parametro:
+                time java UniqueL 0 10000
+                                3
+                                real    0m0.322s
+                time java UniqueL 0 100000
+                                4
+                                real    0m5.820s
+                time java UniqueL 0 200000
+                                4
+                                real    0m21.344s
+
+    HashTable:
+        - L > 0:
+                time java UniqueL 1 < pi-1million.txt
+                                10
+                                real    0m0.473s
+                time java UniqueL 10 < pi-1million.txt
+                                999945
+                                real    0m2.129s
+                time java UniqueL 60 < pi-1million.txt
+                                999941
+                                real    0m2.273s
+        - L == 0 e sem outro parametro (Estudo do Pi):
+                time java UniqueL 0 < pi-1million.txt
+                                4
+                                real    0m1.713s
+                time java UniqueL 0 < pi-10million.txt
+                                5
+                                real    0m18.110s
+        - L == 0 com outro parametro:
+                time java UniqueL 0 10000
+                                3
+                                real    0m0.269s
+                time java UniqueL 0 100000
+                                3
+                                real    0m5.647s
+                time java UniqueL 0 200000
+                                4
+                                real    0m22.474s
+    10-way Trie:
+        - L > 0:
+                time java UniqueL 1 < pi-1million.txt
+                                10
+                                real    0m0.430s
+                time java UniqueL 10 < pi-1million.txt
+                                999945
+                                real    0m3.687s
+                time java -Xmx6G UniqueL 60 < pi-1million.txt
+                                999941
+                                real    0m52.978s
+        - L == 0 e sem outro parametro (Estudo do Pi):
+                time java UniqueL 0 < pi-1million.txt
+                                4
+                                real    0m0.911s
+                time java UniqueL 0 < pi-10million.txt
+                                5
+                                real    0m10.546s
+        - L == 0 com outro parametro:
+                time java UniqueL 0 10000
+                                3
+                                real    0m0.287s
+                time java UniqueL 0 100000
+                                4
+                                real    0m6.112s
+                time java UniqueL 0 200000
+                                4
+                                real    0m20.885s

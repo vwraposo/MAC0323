@@ -1,0 +1,15 @@
+/* /////////////////////////////////////////////////////////////////////////////
+    Nome: Victor Wichmann Raposo
+    Numero USP: 9298020
+    Data: 3/03/2016
+            Problem 1.3.36 Random Iterator
+//////////////////////////////////////////////////////////////////////////////*/
+
+    Com o intuito de verificar se meu iterador aleatório está correto fiz uma
+sequência de testes com o mesmo N, valendo 6, e aumentando o número de testes T.
+Fazendo esses testes obtive vários histogramas diferentes, que foram anexados
+como HistogramX.jpg sendo X o valor de T usado. Observei que conforme o T
+aumentava o histograma ficava mais uniforme, ou seja, as alturas das diferentes
+permutações ficavam cada vez mais próximas. Logo com N tendendo ao infinito as
+alturas de todas as barras ficam iguais, mostrando uma distribuição uniforme das
+permutações.

@@ -1,0 +1,74 @@
+Relatorio da tarefa Unique substrings:
+
+    Para analisar de desempenho das diferentes estrutura fiz uma série de testes e usei a ferramenta "time" do terminal 
+para calcular o tempo de execução. Todos os testes, os resultados e o tempo de execução estão anexados abaixo.
+    Após os testes executados conclui que as versões tem tempos de execução muito próximos, tendo uma grande diferença 
+apenas em alguns casos especificos. Nos casos com L grande a versão do Rolling Hash foi muito mais rápida que a da TST, 
+Mas no estudo do pi, para pi com 10 milhões de digitos a versão anterior foi muito mais eficiente que a atual.
+    
+Versao Atual (Rolling Hash):
+        - L > 0:
+
+                time java UniqueLRK 1 < pi-1million.txt 
+                                10
+                                real    0m0.375s        
+                time java UniqueLRK 10 < pi-1million.txt 
+                                999945
+                                real    0m1.313s
+                time java UniqueLRK 60 < pi-1million.txt 
+                                999941
+                                real    0m1.313s
+
+
+        - L == 0 e sem outro parametro (Estudo do Pi):
+               time java UniqueLRK 0 < pi-1million.txt 
+                                4
+                                real    0m1.288s
+                time java UniqueLRK 0 < pi-10million.txt 
+                                5
+                                real    0m27.496s
+
+ 
+        - L == 0 com outro parametro:
+                time java UniqueLRK 0 10000
+                                3
+                                real    0m0.270s
+                time java UniqueLRK 0 100000
+                                3
+                                real    0m5.865 s
+                time java UniqueLRK 0 200000
+                                4
+                                real    0m19.927 s
+Versao Anterior (TST<Integer, Integer>):
+        - L > 0:
+
+                time java UniqueL 1 < pi-1million.txt 
+                                10
+                                real    0m0.406s        
+                time java UniqueL 10 < pi-1million.txt 
+                                999945
+                                real    0m2.198s
+                time java UniqueL 60 < pi-1million.txt 
+                                999941
+                                real    0m19.433s
+
+
+        - L == 0 e sem outro parametro (Estudo do Pi):
+               time java UniqueL 0 < pi-1million.txt 
+                                4
+                                real    0m1.583s
+                time java UniqueL 0 < pi-10million.txt 
+                                5
+                                real    0m18.831s
+
+ 
+        - L == 0 com outro parametro:
+                time java UniqueL 0 10000
+                                3
+                                real    0m0.291s
+                time java UniqueL 0 100000
+                                3
+                                real    0m5.877s
+                time java UniqueL 0 200000
+                                4
+                                real    0m20.767s

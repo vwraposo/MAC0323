@@ -1,0 +1,22 @@
+
+    Nome: Victor Wichmann Raposo
+    Numero USP: 9298020
+    Data: 3/03/2016
+            Exercise 3.2.47 Random walker
+
+    Em meu programa a função Distance calcula a manhattam distance entre o
+Walker e a origem, já que ele só pode andar na vertical e horizontal.
+    Para estudar o que ocorre com a distância da origem conforme o aumento do N,
+fiz um programa que plota o gráfico dessa distância média de vários Walkers,
+para valores de N entre 0 e 1000 (DistPlot.java). Ao fazer isso, notei que o
+gráfico dessa função se assemelhava ao da função raiz de N, então para efeito
+de comparação plotei essa função também. Como pode se ver na imagem Grafico10000
+(Na qual, M = 10000, o gráfico preto e o da distância e o vermelho da raiz de N)
+os gráficos sao muito parecidos, concluindo que a função distância e proporcional
+à raiz de N.
+    Na pasta, inclui 3 imagens interessantes que obti ao rodar o Distribution.
+A imagem 1 foi rodada com N = 50, M = 20, L = 15; o interessante dessa imagem é
+que os Walkers aleatoriamente foram mais para o canto inferior esquerdo da
+origem. A imagem dois foi obtida com N = 1000, M = 100, L = 70, aumentei M para
+1000 e consegui a imagem 3; comparando as duas imagens e possivel notar que a
+número 3 está bem mais próxima de um quadrado do que a 2.
